@@ -76,6 +76,9 @@
             background-color: rgba(3, 13, 35, 0.8);
             backdrop-filter: blur(20px);
         }
+        html {
+            scroll-behavior: smooth;
+        }
         .gold-gradient {
             background: linear-gradient(135deg, #f2ca50 0%, #d4af37 100%);
         }
@@ -85,6 +88,38 @@
         }
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body.motion-ready .reveal {
+            opacity: 0;
+            transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: opacity, transform;
+        }
+        body.motion-ready .reveal-left {
+            transform: translate3d(-48px, 0, 0);
+        }
+        body.motion-ready .reveal-right {
+            transform: translate3d(48px, 0, 0);
+        }
+        body.motion-ready .reveal-up {
+            transform: translate3d(0, 32px, 0);
+        }
+        body.motion-ready .reveal-visible {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+            body.motion-ready .reveal,
+            body.motion-ready .reveal-left,
+            body.motion-ready .reveal-right,
+            body.motion-ready .reveal-up,
+            body.motion-ready .reveal-visible {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
         }
     </style>
 </head>
@@ -111,7 +146,7 @@
 </nav>
 <main>
 <!-- Hero Section -->
-<section class="relative min-h-screen pt-40 pb-24 px-8 overflow-hidden flex items-center">
+<section class="relative min-h-screen pt-40 pb-24 px-8 overflow-hidden flex items-center" id="top">
 <div class="max-w-7xl mx-auto asymmetric-grid gap-8 items-center w-full">
 <div class="col-span-12 lg:col-span-7 z-10">
 <div class="mb-4 flex items-center gap-3">
@@ -145,7 +180,7 @@
 <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-60"></div>
 </div>
 <!-- Metrics Badge -->
-<div class="absolute -bottom-6 -left-6 bg-surface-container-highest p-8 border-l-4 border-primary shadow-2xl hidden md:block z-20">
+<div class="absolute -bottom-6 -left-6 bg-surface-container-highest p-8 border-l-4 border-primary shadow-2xl hidden md:block z-20 reveal reveal-right">
 <div class="grid grid-cols-2 gap-8">
 <div>
 <span class="block font-headline text-2xl text-primary">100%</span>
@@ -197,7 +232,7 @@
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 <!-- Elite Level Scouting -->
-<div class="md:col-span-2 bg-surface-container-high p-10 border-l-4 border-primary shadow-lg">
+<div class="md:col-span-2 bg-surface-container-high p-10 border-l-4 border-primary shadow-lg reveal reveal-left">
 <div class="flex justify-between items-start mb-8">
 <span class="material-symbols-outlined text-primary text-4xl">travel_explore</span>
 <span class="font-label text-on-surface-variant text-xs tracking-widest uppercase">April 2025 — Present</span>
@@ -213,7 +248,7 @@
 </div>
 </div>
 <!-- Logistics Intern -->
-<div class="bg-surface-container p-10 border border-outline-variant/10">
+<div class="bg-surface-container p-10 border border-outline-variant/10 reveal reveal-right">
 <div class="mb-8">
 <span class="material-symbols-outlined text-primary text-4xl">inventory_2</span>
 </div>
@@ -227,7 +262,7 @@
 </div>
 </div>
 <!-- Operations Supervisor -->
-<div class="md:col-span-1 bg-surface-container p-10 border border-outline-variant/10">
+<div class="md:col-span-1 bg-surface-container p-10 border border-outline-variant/10 reveal reveal-left">
 <div class="mb-8">
 <span class="material-symbols-outlined text-primary text-4xl">supervisor_account</span>
 </div>
@@ -248,7 +283,7 @@
 <div class="w-24 h-1 bg-primary mx-auto"></div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-<div class="p-8 bg-surface border border-outline-variant/10 group hover:border-primary transition-colors">
+<div class="p-8 bg-surface border border-outline-variant/10 group hover:border-primary transition-colors reveal reveal-left">
 <h4 class="font-label text-primary text-xs tracking-widest uppercase mb-6">Financial Analysis</h4>
 <ul class="text-sm text-on-surface-variant space-y-3">
 <li>Revenue modeling</li>
@@ -257,7 +292,7 @@
 <li>Revenue forecasting</li>
 </ul>
 </div>
-<div class="p-8 bg-surface border border-outline-variant/10 group hover:border-primary transition-colors">
+<div class="p-8 bg-surface border border-outline-variant/10 group hover:border-primary transition-colors reveal reveal-right">
 <h4 class="font-label text-primary text-xs tracking-widest uppercase mb-6">Excel &amp; Data</h4>
 <ul class="text-sm text-on-surface-variant space-y-3">
 <li>Pivot Tables &amp; SUMIFS</li>
@@ -266,7 +301,7 @@
 <li>Financial Dashboards</li>
 </ul>
 </div>
-<div class="p-8 bg-surface border border-outline-variant/10 group hover:border-primary transition-colors">
+<div class="p-8 bg-surface border border-outline-variant/10 group hover:border-primary transition-colors reveal reveal-left">
 <h4 class="font-label text-primary text-xs tracking-widest uppercase mb-6">Operations</h4>
 <ul class="text-sm text-on-surface-variant space-y-3">
 <li>Funnel analysis</li>
@@ -275,7 +310,7 @@
 <li>Google Workspace</li>
 </ul>
 </div>
-<div class="p-8 bg-surface border border-outline-variant/10 group hover:border-primary transition-colors">
+<div class="p-8 bg-surface border border-outline-variant/10 group hover:border-primary transition-colors reveal reveal-right">
 <h4 class="font-label text-primary text-xs tracking-widest uppercase mb-6">Languages</h4>
 <ul class="text-sm text-on-surface-variant space-y-3">
 <li class="flex justify-between"><span>English</span> <span class="text-primary font-bold">Fluent</span></li>
@@ -293,38 +328,38 @@
 <div class="w-24 h-1 bg-primary mx-auto"></div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-<div class="p-6 bg-surface border border-outline-variant/10">
+<div class="p-6 bg-surface border border-outline-variant/10 reveal reveal-left">
 <span class="material-symbols-outlined text-primary mb-4">workspace_premium</span>
 <h4 class="font-headline text-lg mb-2">Bolivian Tuition Advantage Scholarship</h4>
 <p class="text-xs text-on-surface-variant font-label uppercase tracking-widest">University of Arkansas</p>
 </div>
-<div class="p-6 bg-surface border border-outline-variant/10">
+<div class="p-6 bg-surface border border-outline-variant/10 reveal reveal-right">
 <span class="material-symbols-outlined text-primary mb-4">military_tech</span>
 <h4 class="font-headline text-lg mb-2">Dean's List</h4>
 <p class="text-xs text-on-surface-variant font-label uppercase tracking-widest">Fall 2023, Spring 2024, Spring 2025</p>
 </div>
-<div class="p-6 bg-surface border border-outline-variant/10">
+<div class="p-6 bg-surface border border-outline-variant/10 reveal reveal-left">
 <span class="material-symbols-outlined text-primary mb-4">sports_soccer</span>
 <h4 class="font-headline text-lg mb-2">Athletic Scholarship</h4>
 <p class="text-xs text-on-surface-variant font-label uppercase tracking-widest">Men's Soccer, FMCC</p>
 </div>
-<div class="p-6 bg-surface border border-outline-variant/10">
+<div class="p-6 bg-surface border border-outline-variant/10 reveal reveal-right">
 <span class="material-symbols-outlined text-primary mb-4">rocket_launch</span>
 <h4 class="font-headline text-lg mb-2">Side Hustle Hub Member</h4>
 <p class="text-xs text-on-surface-variant font-label uppercase tracking-widest">Office of Entrepreneurship at UofA</p>
 </div>
-<div class="p-6 bg-surface border border-outline-variant/10">
+<div class="p-6 bg-surface border border-outline-variant/10 reveal reveal-left">
 <span class="material-symbols-outlined text-primary mb-4">code</span>
 <h4 class="font-headline text-lg mb-2">Claude Code in Action</h4>
 <p class="text-xs text-on-surface-variant font-label uppercase tracking-widest">Certification by Anthropic</p>
 </div>
-<div class="p-6 bg-surface border border-outline-variant/10">
+<div class="p-6 bg-surface border border-outline-variant/10 reveal reveal-right">
 <span class="material-symbols-outlined text-primary mb-4">school</span>
 <h4 class="font-headline text-lg mb-2">Junior Business Economics</h4>
 <p class="text-xs text-on-surface-variant font-label uppercase tracking-widest">Walton College of Business</p>
 </div>
 </div>
-<div class="mt-20 p-10 bg-surface-container border border-primary/20 text-center">
+<div class="mt-20 p-10 bg-surface-container border border-primary/20 text-center reveal reveal-up">
 <p class="font-headline text-2xl text-on-surface">Seeking Summer 2026 internship opportunities in Financial Analysis, Corporate Finance, and Management Consulting.</p>
 </div>
 </div>
@@ -338,7 +373,7 @@
 <p class="max-w-3xl mx-auto text-on-surface-variant text-lg">A sample of the content used to educate athletes, build trust, and drive organic visibility for Elite Level Scouting USA.</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<div class="bg-surface-container-high border border-white/5 overflow-hidden">
+<div class="bg-surface-container-high border border-white/5 overflow-hidden reveal reveal-left">
 <div class="aspect-video bg-surface-container-highest overflow-hidden">
 <video class="h-full w-full object-cover" controls playsinline preload="metadata">
 <source src="podcast.mp4" type="video/mp4"/>
@@ -355,7 +390,7 @@
 <a class="text-primary font-label text-xs uppercase tracking-widest flex items-center gap-2 hover:translate-x-1 transition-transform" href="https://www.instagram.com/reel/DQz7oEeipKw/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank">View on Instagram <span class="material-symbols-outlined text-sm">open_in_new</span></a>
 </div>
 </div>
-<div class="bg-surface-container-high border border-white/5 overflow-hidden">
+<div class="bg-surface-container-high border border-white/5 overflow-hidden reveal reveal-up">
 <div class="bg-surface-container-highest px-6 py-8 flex items-center justify-center">
 <div class="aspect-[9/16] w-full max-w-[260px] overflow-hidden rounded-sm border border-white/10 shadow-2xl">
 <video class="h-full w-full object-cover" controls playsinline poster="college-pricing-cover.png" preload="metadata">
@@ -374,7 +409,7 @@
 <a class="text-primary font-label text-xs uppercase tracking-widest flex items-center gap-2 hover:translate-x-1 transition-transform" href="https://www.instagram.com/reel/DWIGn9njjSh/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank">View on Instagram <span class="material-symbols-outlined text-sm">open_in_new</span></a>
 </div>
 </div>
-<div class="bg-surface-container-high border border-white/5 overflow-hidden">
+<div class="bg-surface-container-high border border-white/5 overflow-hidden reveal reveal-right">
 <div class="bg-surface-container-highest px-6 py-8 flex items-center justify-center">
 <div class="aspect-[9/16] w-full max-w-[260px] overflow-hidden rounded-sm border border-white/10 shadow-2xl">
 <img alt="Player commitment spotlight for Carlos Pazos" class="h-full w-full object-cover" src="player-commitment.png"/>
@@ -402,7 +437,7 @@
 <p class="max-w-3xl mx-auto text-on-surface-variant text-lg">Feedback from student-athletes who worked directly with Elite Level through the recruiting process.</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<div class="p-10 bg-surface border-l-2 border-primary h-auto">
+<div class="p-10 bg-surface border-l-2 border-primary h-auto reveal reveal-left">
 <span class="material-symbols-outlined text-primary/30 text-4xl block mb-6">format_quote</span>
 <div class="mb-8">
 <p class="font-body text-on-surface text-lg mb-4 italic">"Cuando llegué a Elite Level no sabía realmente qué esperar. Lo que encontré fue un proceso serio, con seguimiento real y objetivos concretos. Hoy estoy en Doane University y puedo decir que cada paso del camino tuvo sentido. El acompañamiento que me dieron fue clave para llegar hasta acá."</p>
@@ -410,7 +445,7 @@
 </div>
 <p class="font-label text-xs tracking-widest uppercase text-primary">— Thomas Sanabria</p>
 </div>
-<div class="p-10 bg-surface border-l-2 border-primary h-auto">
+<div class="p-10 bg-surface border-l-2 border-primary h-auto reveal reveal-up">
 <span class="material-symbols-outlined text-primary/30 text-4xl block mb-6">format_quote</span>
 <div class="mb-8">
 <p class="font-body text-on-surface text-lg mb-4 italic">"Estaba en un community college que no me daba las condiciones que buscaba. Contacté a Elite Level y en pocos meses tenía un plan claro y universidades concretas en la mesa. Hoy compito en Herkimer College, Nueva York. No lo hubiera logrado sin el trabajo que hicieron por mí."</p>
@@ -418,7 +453,7 @@
 </div>
 <p class="font-label text-xs tracking-widest uppercase text-primary">— Carlos Pazos</p>
 </div>
-<div class="p-10 bg-surface border-l-2 border-primary h-auto">
+<div class="p-10 bg-surface border-l-2 border-primary h-auto reveal reveal-right">
 <span class="material-symbols-outlined text-primary/30 text-4xl block mb-6">format_quote</span>
 <div class="mb-8">
 <p class="font-body text-on-surface text-lg mb-4 italic">"El proceso con Elite Level fue directo y honesto desde el primer día. Me presentaron un plan real, con tiempos y objetivos claros. Hoy estoy comprometido con University of Saint Mary en Kansas y puedo decir que la agencia fue fundamental para que esto pasara. Confié en el proceso y funcionó."</p>
@@ -432,8 +467,8 @@
 <!-- Contact Section -->
 <section class="py-32 px-8" id="contact">
 <div class="max-w-7xl mx-auto">
-<div class="bg-surface-container-high rounded-sm shadow-2xl overflow-hidden grid lg:grid-cols-2 border border-white/5">
-<div class="p-12 md:p-20 bg-surface-container-highest">
+<div class="bg-surface-container-high rounded-sm shadow-2xl overflow-hidden grid lg:grid-cols-2 border border-white/5 reveal reveal-up">
+<div class="p-12 md:p-20 bg-surface-container-highest reveal reveal-left">
 <h2 class="font-headline text-4xl md:text-5xl text-primary mb-8">Initiate Connection</h2>
 <p class="text-on-surface-variant text-lg mb-12">
                         For internship inquiries, collaborative scouting ventures, or professional networking.
@@ -458,7 +493,7 @@
                         </a>
 </div>
 </div>
-<div class="p-12 md:p-20 bg-surface-container">
+<div class="p-12 md:p-20 bg-surface-container reveal reveal-right">
 <form action="mailto:alemorale2601@gmail.com?subject=Website%20Inquiry%20for%20Hugo%20Morales" class="space-y-8" enctype="text/plain" method="post">
 <div class="relative group">
 <input class="w-full bg-transparent border-0 border-b border-outline-variant py-3 focus:ring-0 focus:border-primary transition-colors text-on-surface placeholder:text-on-surface-variant/40" name="name" placeholder="Your Name" type="text"/>
@@ -497,4 +532,47 @@
         </p>
 </div>
 </footer>
+<script>
+    (() => {
+        document.body.classList.add('motion-ready');
+
+        const revealItems = Array.from(document.querySelectorAll('.reveal'));
+        if (revealItems.length) {
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) return;
+                    entry.target.classList.add('reveal-visible');
+                    observer.unobserve(entry.target);
+                });
+            }, {
+                threshold: 0.18,
+                rootMargin: "0px 0px -10% 0px"
+            });
+
+            revealItems.forEach((item) => revealObserver.observe(item));
+        }
+
+        if ("scrollRestoration" in history) {
+            history.scrollRestoration = "manual";
+        }
+
+        const resetToTop = () => {
+            if (window.location.hash) return;
+            window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+            requestAnimationFrame(() => {
+                window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+            });
+        };
+
+        setTimeout(resetToTop, 0);
+
+        window.addEventListener("pageshow", (event) => {
+            const navigationEntry = performance.getEntriesByType("navigation")[0];
+            const isBackForward = event.persisted || (navigationEntry && navigationEntry.type === "back_forward");
+            if (!isBackForward) {
+                setTimeout(resetToTop, 0);
+            }
+        });
+    })();
+</script>
 </body></html>
