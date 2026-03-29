@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HUGO MORALES | Business Economics &amp; Entrepreneurship</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-container": "#d4af37",
+                        "on-tertiary-fixed": "#241a0a",
+                        "secondary": "#d2c790",
+                        "primary-fixed-dim": "#e9c349",
+                        "on-tertiary": "#3a2e1d",
+                        "tertiary-fixed": "#f4dfc6",
+                        "tertiary": "#dfcbb3",
+                        "secondary-container": "#4e471c",
+                        "tertiary-fixed-dim": "#d7c4ab",
+                        "on-surface-variant": "#d0c5af",
+                        "secondary-fixed": "#efe3aa",
+                        "surface-container-low": "#101b31",
+                        "on-primary-fixed": "#241a00",
+                        "inverse-surface": "#d9e2ff",
+                        "on-surface": "#d9e2ff",
+                        "outline-variant": "#4d4635",
+                        "error-container": "#93000a",
+                        "on-error": "#690005",
+                        "tertiary-container": "#c3b098",
+                        "inverse-primary": "#735c00",
+                        "surface-bright": "#2f3951",
+                        "surface-variant": "#2a344c",
+                        "surface-tint": "#e9c349",
+                        "on-tertiary-container": "#504330",
+                        "on-tertiary-fixed-variant": "#524532",
+                        "on-secondary": "#373108",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-lowest": "#030d23",
+                        "background": "#081329",
+                        "surface-dim": "#081329",
+                        "primary-fixed": "#ffe088",
+                        "outline": "#99907c",
+                        "surface": "#081329",
+                        "on-background": "#d9e2ff",
+                        "surface-container": "#151f36",
+                        "primary": "#f2ca50",
+                        "surface-container-high": "#1f2a41",
+                        "on-primary-container": "#554300",
+                        "surface-container-highest": "#2a344c",
+                        "on-primary-fixed-variant": "#574500",
+                        "on-secondary-fixed-variant": "#4e471c",
+                        "error": "#ffb4ab",
+                        "secondary-fixed-dim": "#d2c790",
+                        "inverse-on-surface": "#263047",
+                        "on-secondary-fixed": "#201c00",
+                        "on-primary": "#3c2f00",
+                        "on-secondary-container": "#c0b680"
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-nav {
+            background-color: rgba(3, 13, 35, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #f2ca50 0%, #d4af37 100%);
+        }
+        .asymmetric-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 glass-nav shadow-2xl border-b border-white/5">
+<div class="flex justify-between items-center w-full px-8 py-6 max-w-7xl mx-auto">
+<div class="text-xl font-bold tracking-[0.2em] text-[#f2ca50] uppercase font-headline">
+            HUGO MORALES
+        </div>
+<div class="hidden md:flex gap-10 items-center">
+<a class="text-[#d0c5af] hover:text-[#f2ca50] transition-colors duration-300 font-label tracking-widest text-xs uppercase" href="#about">About</a>
+<a class="text-[#d0c5af] hover:text-[#f2ca50] transition-colors duration-300 font-label tracking-widest text-xs uppercase" href="#experience">Experience</a>
+<a class="text-[#d0c5af] hover:text-[#f2ca50] transition-colors duration-300 font-label tracking-widest text-xs uppercase" href="#skills">Skills</a>
+<a class="text-[#f2ca50] border-b-2 border-[#f2ca50] pb-1 font-label tracking-widest text-xs uppercase" href="#contact">Contact</a>
+<a class="gold-gradient text-on-primary-fixed px-6 py-2 font-bold tracking-widest text-xs uppercase rounded-sm hover:scale-95 transition-all duration-300 flex items-center gap-2" href="https://www.linkedin.com/in/hugo-morales-arteaga/" target="_blank">
+                Connect
+            </a>
+</div>
+<div class="md:hidden">
+<span class="material-symbols-outlined text-primary text-3xl">menu</span>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen pt-40 pb-24 px-8 overflow-hidden flex items-center">
+<div class="max-w-7xl mx-auto asymmetric-grid gap-8 items-center w-full">
+<div class="col-span-12 lg:col-span-7 z-10">
+<div class="mb-4 flex items-center gap-3">
+<span class="h-[1px] w-8 bg-primary"></span>
+<span class="font-label text-primary tracking-[0.3em] uppercase text-xs">Walton College of Business</span>
+</div>
+<h1 class="font-headline text-5xl md:text-7xl lg:text-8xl text-primary leading-tight tracking-tight mb-6">
+                    HUGO <br/>
+<span class="text-on-surface">MORALES</span>
+</h1>
+<h2 class="font-body text-lg md:text-xl text-primary-container font-semibold tracking-wide mb-8">
+                    Business Economics Student | Walton College of Business | Founder | Bilingual
+                </h2>
+<p class="font-body text-xl text-on-surface-variant max-w-2xl mb-12 leading-relaxed">
+                    Business Economics student with founder experience, operational discipline, and a growing focus on finance, strategy, and consulting.
+                </p>
+<div class="flex flex-col sm:flex-row gap-6">
+<a class="gold-gradient text-on-primary-fixed px-10 py-4 font-bold tracking-widest text-sm uppercase rounded-sm flex items-center gap-3 group" href="Resume Hugo Morales 2026.pdf" target="_blank">
+                        View Resume <span class="material-symbols-outlined group-hover:translate-y-[-2px] transition-transform">description</span>
+</a>
+<a class="border border-primary text-primary px-10 py-4 font-bold tracking-widest text-sm uppercase rounded-sm flex items-center gap-3 hover:bg-primary/5 transition-colors group" href="https://www.linkedin.com/in/hugo-morales-arteaga/" target="_blank">
+                        Connect on LinkedIn <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">link</span>
+</a>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-5 relative mt-12 lg:mt-0">
+<div class="aspect-[4/5] bg-surface-container-high relative overflow-hidden rounded-sm shadow-2xl border border-white/10 p-2">
+<div class="w-full h-full overflow-hidden border border-white/5">
+<img alt="Hugo Morales Portrait" class="w-full h-full object-cover transition-all duration-700" src="https://lh3.googleusercontent.com/aida/ADBb0ugSQgPBOMFmbpODWwMZ9bVphpYiYKaf7XFrRtQgQ6jQFqd3cPxr3SSi5njHVMb7B-pefA8mZlDHcrTMNvaVfwjDek8ekMJYeiUR4eKJi0cmDXoPpylMektapBM7k9IHgd4z0Ufa_vWssRLKG6cdjFVuSJeTYp_ylP878MQ-dyRmvG9MN9SWWTQGRE-3cJ5JY3Ut6QB_UlzZ5xyl6zh6p0AsbeQ8ZOpvDzBalbM59mHGpIxYKsf_FLXmv56bkTXDm496wMoZXtzzkMI"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-60"></div>
+</div>
+<!-- Metrics Badge -->
+<div class="absolute -bottom-6 -left-6 bg-surface-container-highest p-8 border-l-4 border-primary shadow-2xl hidden md:block z-20">
+<div class="grid grid-cols-2 gap-8">
+<div>
+<span class="block font-headline text-2xl text-primary">100%</span>
+<span class="block font-label text-[10px] tracking-widest uppercase text-on-surface-variant">Placement Rate</span>
+</div>
+<div>
+<span class="block font-headline text-2xl text-primary">813K+</span>
+<span class="block font-label text-[10px] tracking-widest uppercase text-on-surface-variant">Social Views</span>
+</div>
+<div>
+<span class="block font-headline text-2xl text-primary">10+</span>
+<span class="block font-label text-[10px] tracking-widest uppercase text-on-surface-variant">Active Clients</span>
+</div>
+<div>
+<span class="block font-headline text-2xl text-primary">Ready</span>
+<span class="block font-label text-[10px] tracking-widest uppercase text-on-surface-variant">Summer 2026</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-32 px-8 bg-surface-container-low" id="about">
+<div class="max-w-7xl mx-auto asymmetric-grid">
+<div class="col-start-1 col-span-12 lg:col-start-3 lg:col-span-8">
+<span class="font-label text-primary tracking-[0.4em] uppercase text-sm block mb-4 text-center">Background</span>
+<h2 class="font-headline text-4xl md:text-5xl text-on-surface mb-12 text-center">A Global Perspective</h2>
+<div class="space-y-8 text-lg md:text-xl text-on-surface-variant leading-relaxed text-justify">
+<p>
+                        Originally from Santa Cruz, Bolivia, Hugo Morales moved to the United States to pursue college opportunities through athletics, beginning his journey on an athletic scholarship as a men's soccer student-athlete at Fulton-Montgomery Community College. He now studies Business Economics at the University of Arkansas Walton College of Business, where he combines an international perspective with a strong interest in finance, strategy, and business decision-making.
+                    </p>
+<p>
+                        Alongside school, he founded Elite Level Scouting USA, building a client-based business with measurable revenue, real growth, and a 100% placement rate. His background across entrepreneurship, operations, and cross-cultural environments shapes the way he approaches problems: analytically, competitively, and with long-term ownership in mind.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience Bento Grid -->
+<section class="bg-surface py-24 px-8" id="experience">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+<div>
+<span class="font-label text-primary tracking-[0.4em] uppercase text-sm block mb-4">Professional Trajectory</span>
+<h2 class="font-headline text-4xl text-on-surface">Experience grounded in entrepreneurship, operations, and measurable execution.</h2>
+</div>
+<div class="h-[2px] flex-grow bg-outline-variant/20 mx-8 hidden md:block mb-4"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Elite Level Scouting -->
+<div class="md:col-span-2 bg-surface-container-high p-10 border-l-4 border-primary shadow-lg">
+<div class="flex justify-between items-start mb-8">
+<span class="material-symbols-outlined text-primary text-4xl">travel_explore</span>
+<span class="font-label text-on-surface-variant text-xs tracking-widest uppercase">April 2025 — Present</span>
+</div>
+<h3 class="font-headline text-3xl text-on-surface mb-2">Founder</h3>
+<p class="font-label text-primary text-sm tracking-widest uppercase mb-6">Elite Level Scouting USA | Santa Cruz, Bolivia</p>
+<div class="space-y-4 text-on-surface-variant leading-relaxed mb-6 text-lg">
+<p>Founded and scaled a sports-recruitment business generating an average of $2,200 in revenue per client.</p>
+<ul class="space-y-3 font-label text-xs tracking-widest text-on-surface uppercase list-none">
+<li class="flex items-start gap-3"><span class="w-1.5 h-1.5 bg-primary rounded-full mt-1.5"></span> Built a client acquisition funnel from 0 to 10 leads per month, with 80% organic conversion.</li>
+<li class="flex items-start gap-3"><span class="w-1.5 h-1.5 bg-primary rounded-full mt-1.5"></span> Manage 10+ active clients with a 100% placement rate while driving 813,500 total views.</li>
+</ul>
+</div>
+</div>
+<!-- Logistics Intern -->
+<div class="bg-surface-container p-10 border border-outline-variant/10">
+<div class="mb-8">
+<span class="material-symbols-outlined text-primary text-4xl">inventory_2</span>
+</div>
+<span class="font-label text-on-surface-variant text-[10px] tracking-widest uppercase block mb-2">Dec 2025 — Jan 2026</span>
+<h3 class="font-headline text-2xl text-on-surface mb-2">Logistics Intern</h3>
+<p class="font-label text-primary text-[10px] tracking-widest uppercase mb-4">Trebol Ingeniería y Construcción SRL</p>
+<div class="text-xs text-on-surface-variant leading-relaxed space-y-2 uppercase tracking-tighter">
+<p>• Supported coordination across 32 active construction projects</p>
+<p>• Reduced coordination errors by ~50% via Google Workspace</p>
+<p>• Maintained Excel-based inventory tracking</p>
+</div>
+</div>
+<!-- Operations Supervisor -->
+<div class="md:col-span-1 bg-surface-container p-10 border border-outline-variant/10">
+<div class="mb-8">
+<span class="material-symbols-outlined text-primary text-4xl">supervisor_account</span>
+</div>
+<span class="font-label text-on-surface-variant text-[10px] tracking-widest uppercase block mb-2">Jan 2024 — May 2025</span>
+<h3 class="font-headline text-2xl text-on-surface mb-2">Operations Supervisor</h3>
+<p class="font-label text-primary text-[10px] tracking-widest uppercase mb-4">FMCC Library | Johnstown, NY</p>
+<p class="text-sm text-on-surface-variant">Managed daily operations serving a 2,000+ student body. Maintained zero asset loss across all supervised equipment.</p>
+</div>
+<!-- Education Summary Card -->
+<div class="md:col-span-2 bg-primary text-on-primary-fixed p-10 flex flex-col justify-between" id="education">
+<div>
+<h3 class="font-headline text-3xl mb-4">Academic Excellence</h3>
+<p class="text-lg opacity-90 leading-relaxed max-w-xl">
+                            Studying the intersection of economic theory and practical business strategy. Junior Business Economics Student at the University of Arkansas.
+                        </p>
+</div>
+<div class="mt-8 grid grid-cols-2 md:grid-cols-3 gap-8">
+<div>
+<span class="block text-2xl font-bold">3.33</span>
+<span class="text-[10px] uppercase tracking-widest">Arkansas GPA</span>
+</div>
+<div>
+<span class="block text-2xl font-bold">3.50</span>
+<span class="text-[10px] uppercase tracking-widest">FMCC GPA</span>
+</div>
+<div>
+<span class="block text-2xl font-bold">May 2027</span>
+<span class="text-[10px] uppercase tracking-widest">Exp. Graduation</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Skills Section -->
+<section class="py-24 px-8 bg-surface-container-low" id="skills">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<span class="font-label text-primary tracking-[0.4em] uppercase text-sm block mb-4">Core Competencies</span>
+<h2 class="font-headline text-4xl text-on-surface mb-4">Strategic Skills</h2>
+<div class="w-24 h-1 bg-primary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="p-8 bg-surface border border-outline-variant/10 group hover:border-primary transition-colors">
+<h4 class="font-label text-primary text-xs tracking-widest uppercase mb-6">Financial Analysis</h4>
+<ul class="text-sm text-on-surface-variant space-y-3">
+<li>Revenue modeling</li>
+<li>Pricing analysis</li>
+<li>KPI development</li>
+<li>Revenue forecasting</li>
+</ul>
+</div>
+<div class="p-8 bg-surface border border-outline-variant/10 group hover:border-primary transition-colors">
+<h4 class="font-label text-primary text-xs tracking-widest uppercase mb-6">Excel &amp; Data</h4>
+<ul class="text-sm text-on-surface-variant space-y-3">
+<li>Pivot Tables &amp; SUMIFS</li>
+<li>Scenario Analysis</li>
+<li>Solver Optimization</li>
+<li>Financial Dashboards</li>
+</ul>
+</div>
+<div class="p-8 bg-surface border border-outline-variant/10 group hover:border-primary transition-colors">
+<h4 class="font-label text-primary text-xs tracking-widest uppercase mb-6">Operations</h4>
+<ul class="text-sm text-on-surface-variant space-y-3">
+<li>Funnel analysis</li>
+<li>Workflow design</li>
+<li>Inventory management</li>
+<li>Google Workspace</li>
+</ul>
+</div>
+<div class="p-8 bg-surface border border-outline-variant/10 group hover:border-primary transition-colors">
+<h4 class="font-label text-primary text-xs tracking-widest uppercase mb-6">Languages</h4>
+<ul class="text-sm text-on-surface-variant space-y-3">
+<li class="flex justify-between"><span>English</span> <span class="text-primary font-bold">Fluent</span></li>
+<li class="flex justify-between"><span>Spanish</span> <span class="text-primary font-bold">Native</span></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Honors & Certifications -->
+<section class="py-24 px-8 bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline text-4xl text-on-surface mb-4">Honors &amp; Distinctions</h2>
+<div class="w-24 h-1 bg-primary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="p-6 bg-surface border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary mb-4">workspace_premium</span>
+<h4 class="font-headline text-lg mb-2">Bolivian Tuition Advantage Scholarship</h4>
+<p class="text-xs text-on-surface-variant font-label uppercase tracking-widest">University of Arkansas</p>
+</div>
+<div class="p-6 bg-surface border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary mb-4">military_tech</span>
+<h4 class="font-headline text-lg mb-2">Dean's List</h4>
+<p class="text-xs text-on-surface-variant font-label uppercase tracking-widest">Fall 2023, Spring 2024, Spring 2025</p>
+</div>
+<div class="p-6 bg-surface border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary mb-4">sports_soccer</span>
+<h4 class="font-headline text-lg mb-2">Athletic Scholarship</h4>
+<p class="text-xs text-on-surface-variant font-label uppercase tracking-widest">Men's Soccer, FMCC</p>
+</div>
+<div class="p-6 bg-surface border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary mb-4">rocket_launch</span>
+<h4 class="font-headline text-lg mb-2">Side Hustle Hub Member</h4>
+<p class="text-xs text-on-surface-variant font-label uppercase tracking-widest">Office of Entrepreneurship at UofA</p>
+</div>
+<div class="p-6 bg-surface border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary mb-4">code</span>
+<h4 class="font-headline text-lg mb-2">Claude Code in Action</h4>
+<p class="text-xs text-on-surface-variant font-label uppercase tracking-widest">Certification by Anthropic</p>
+</div>
+<div class="p-6 bg-surface border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary mb-4">school</span>
+<h4 class="font-headline text-lg mb-2">Junior Business Economics</h4>
+<p class="text-xs text-on-surface-variant font-label uppercase tracking-widest">Walton College of Business</p>
+</div>
+</div>
+<div class="mt-20 p-10 bg-surface-container border border-primary/20 text-center">
+<p class="font-headline text-2xl text-on-surface">Seeking Summer 2026 internship opportunities in Financial Analysis, Corporate Finance, and Management Consulting.</p>
+</div>
+</div>
+</section>
+<!-- Selected Agency Media -->
+<section class="py-24 px-8" id="media">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<span class="font-label text-primary tracking-[0.4em] uppercase text-sm block mb-4">Industry Impact</span>
+<h2 class="font-headline text-4xl text-on-surface mb-6">Selected Agency Media</h2>
+<p class="max-w-3xl mx-auto text-on-surface-variant text-lg">A sample of the content used to educate athletes, build trust, and drive organic visibility for Elite Level Scouting USA.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface-container-high border border-white/5 overflow-hidden">
+<div class="aspect-video bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-5xl opacity-40">play_circle</span>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-center mb-3">
+<span class="font-label text-[10px] text-primary uppercase tracking-widest">Instagram Reel</span>
+<span class="font-label text-[10px] text-on-surface-variant uppercase tracking-widest">14.6K Views</span>
+</div>
+<h4 class="font-headline text-xl text-on-surface mb-3">Podcast Launch Interview</h4>
+<p class="text-sm text-on-surface-variant mb-6">Launched a new podcast-style content series featuring real scholarship stories...</p>
+<a class="text-primary font-label text-xs uppercase tracking-widest flex items-center gap-2 hover:translate-x-1 transition-transform" href="https://www.instagram.com/reel/DQz7oEeipKw/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank">View on Instagram <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+</div>
+</div>
+<div class="bg-surface-container-high border border-white/5 overflow-hidden">
+<div class="aspect-video bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-5xl opacity-40">payments</span>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-center mb-3">
+<span class="font-label text-[10px] text-primary uppercase tracking-widest">Instagram Reel</span>
+<span class="font-label text-[10px] text-on-surface-variant uppercase tracking-widest">20.1K Views</span>
+</div>
+<h4 class="font-headline text-xl text-on-surface mb-3">Cost of Studying in the U.S.</h4>
+<p class="text-sm text-on-surface-variant mb-6">Explained the financial gap between standard international tuition and the reduced cost...</p>
+<a class="text-primary font-label text-xs uppercase tracking-widest flex items-center gap-2 hover:translate-x-1 transition-transform" href="https://www.instagram.com/reel/DWIGn9njjSh/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank">View on Instagram <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+</div>
+</div>
+<div class="bg-surface-container-high border border-white/5 overflow-hidden">
+<div class="aspect-video bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-5xl opacity-40">stars</span>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-center mb-3">
+<span class="font-label text-[10px] text-primary uppercase tracking-widest">Instagram Post</span>
+<span class="font-label text-[10px] text-on-surface-variant uppercase tracking-widest">4.3K Views</span>
+</div>
+<h4 class="font-headline text-xl text-on-surface mb-3">Player Commitment Spotlight</h4>
+<p class="text-sm text-on-surface-variant mb-6">Highlighted the commitment of Carlos Pazos from Spain...</p>
+<a class="text-primary font-label text-xs uppercase tracking-widest flex items-center gap-2 hover:translate-x-1 transition-transform" href="https://www.instagram.com/p/DJ7JWdgsbFb/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==" target="_blank">View on Instagram <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="py-24 px-8 bg-surface-container-low" id="testimonials">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<span class="font-label text-primary tracking-[0.4em] uppercase text-sm block mb-4">Success Stories</span>
+<h2 class="font-headline text-4xl text-on-surface mb-6">Client Testimonials</h2>
+<p class="max-w-3xl mx-auto text-on-surface-variant text-lg">Feedback from student-athletes who worked directly with Elite Level through the recruiting process.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="p-10 bg-surface border-l-2 border-primary h-auto">
+<span class="material-symbols-outlined text-primary/30 text-4xl block mb-6">format_quote</span>
+<div class="mb-8">
+<p class="font-body text-on-surface text-lg mb-4 italic">"Cuando llegué a Elite Level no sabía realmente qué esperar. Lo que encontré fue un proceso serio, con seguimiento real y objetivos concretos. Hoy estoy en Doane University y puedo decir que cada paso del camino tuvo sentido. El acompañamiento que me dieron fue clave para llegar hasta acá."</p>
+<p class="font-body text-on-surface-variant/60 text-sm italic">"When I arrived at Elite Level, I did not really know what to expect. What I found was a serious process, with real follow-up and concrete goals. Today I am at Doane University, and I can say that every step along the way made sense. The support they gave me was key to getting here."</p>
+</div>
+<p class="font-label text-xs tracking-widest uppercase text-primary">— Thomas Sanabria</p>
+</div>
+<div class="p-10 bg-surface border-l-2 border-primary h-auto">
+<span class="material-symbols-outlined text-primary/30 text-4xl block mb-6">format_quote</span>
+<div class="mb-8">
+<p class="font-body text-on-surface text-lg mb-4 italic">"Estaba en un community college que no me daba las condiciones que buscaba. Contacté a Elite Level y en pocos meses tenía un plan claro y universidades concretas en la mesa. Hoy compito en Herkimer College, Nueva York. No lo hubiera logrado sin el trabajo que hicieron por mí."</p>
+<p class="font-body text-on-surface-variant/60 text-sm italic">"I was at a community college that did not give me the conditions I was looking for. I contacted Elite Level, and within a few months I had a clear plan and concrete universities on the table. Today I compete at Herkimer College in New York. I would not have achieved it without the work they did for me."</p>
+</div>
+<p class="font-label text-xs tracking-widest uppercase text-primary">— Carlos Pazos</p>
+</div>
+<div class="p-10 bg-surface border-l-2 border-primary h-auto">
+<span class="material-symbols-outlined text-primary/30 text-4xl block mb-6">format_quote</span>
+<div class="mb-8">
+<p class="font-body text-on-surface text-lg mb-4 italic">"El proceso con Elite Level fue directo y honesto desde el primer día. Me presentaron un plan real, con tiempos y objetivos claros. Hoy estoy comprometido con University of Saint Mary en Kansas y puedo decir que la agencia fue fundamental para que esto pasara. Confié en el proceso y funcionó."</p>
+<p class="font-body text-on-surface-variant/60 text-sm italic">"The process with Elite Level was direct and honest from the first day. They presented me with a real plan, with clear timelines and goals. Today I am committed to the University of Saint Mary in Kansas, and I can say that the agency was fundamental in making this happen. I trusted the process, and it worked."</p>
+</div>
+<p class="font-label text-xs tracking-widest uppercase text-primary">— Andrey Rincón</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-32 px-8" id="contact">
+<div class="max-w-7xl mx-auto">
+<div class="bg-surface-container-high rounded-sm shadow-2xl overflow-hidden grid lg:grid-cols-2 border border-white/5">
+<div class="p-12 md:p-20 bg-surface-container-highest">
+<h2 class="font-headline text-4xl md:text-5xl text-primary mb-8">Initiate Connection</h2>
+<p class="text-on-surface-variant text-lg mb-12">
+                        For internship inquiries, collaborative scouting ventures, or professional networking.
+                    </p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary">mail</span>
+<span class="font-body text-on-surface">alemorale2601@gmail.com</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary">phone</span>
+<span class="font-body text-on-surface">786-898-6458</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span class="font-body text-on-surface">Fayetteville, AR</span>
+</div>
+</div>
+<div class="mt-12">
+<a class="text-primary hover:text-secondary flex items-center gap-2 font-label uppercase tracking-widest text-sm transition-colors" href="https://www.linkedin.com/in/hugo-morales-arteaga/" target="_blank">
+<span class="material-symbols-outlined">link</span> hugo-morales-arteaga
+                        </a>
+</div>
+</div>
+<div class="p-12 md:p-20 bg-surface-container flex flex-col justify-center gap-6">
+<a class="w-full gold-gradient text-on-primary-fixed py-4 font-bold tracking-[0.2em] uppercase rounded-sm hover:scale-[0.98] transition-transform flex items-center justify-center gap-3" href="mailto:alemorale2601@gmail.com">
+<span class="material-symbols-outlined">email</span> Email Hugo
+                    </a>
+<a class="w-full border border-primary text-primary py-4 font-bold tracking-[0.2em] uppercase rounded-sm hover:bg-primary/5 transition-colors flex items-center justify-center gap-3" href="https://www.linkedin.com/in/hugo-morales-arteaga/" target="_blank">
+<span class="material-symbols-outlined">link</span> Connect on LinkedIn
+                    </a>
+<a class="w-full border border-primary text-primary py-4 font-bold tracking-[0.2em] uppercase rounded-sm hover:bg-primary/5 transition-colors flex items-center justify-center gap-3" href="tel:+17868986458">
+<span class="material-symbols-outlined">call</span> Call Hugo
+                    </a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest w-full py-12 px-8 border-t border-outline-variant/10">
+<div class="flex flex-col md:flex-row justify-between items-center w-full max-w-7xl mx-auto gap-8">
+<div class="text-lg font-bold tracking-[0.2em] text-[#f2ca50] font-headline">
+            HUGO MORALES
+        </div>
+<div class="flex gap-8">
+<a class="text-[#d0c5af]/60 hover:text-[#f2ca50] transition-colors duration-500 font-label text-xs tracking-widest uppercase" href="https://www.linkedin.com/in/hugo-morales-arteaga/" target="_blank">LinkedIn</a>
+<a class="text-[#d0c5af]/60 hover:text-[#f2ca50] transition-colors duration-500 font-label text-xs tracking-widest uppercase" href="mailto:alemorale2601@gmail.com">Email</a>
+<a class="text-[#d0c5af]/60 hover:text-[#f2ca50] transition-colors duration-500 font-label text-xs tracking-widest uppercase" href="Resume Hugo Morales 2026.pdf" target="_blank">Resume</a>
+</div>
+<p class="font-label text-[10px] tracking-widest uppercase text-[#d0c5af]/40">
+            © 2024 HUGO MORALES. ALL RIGHTS RESERVED.
+        </p>
+</div>
+</footer>
+</body></html>
