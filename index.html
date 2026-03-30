@@ -142,9 +142,9 @@
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 glass-nav shadow-2xl border-b border-white/5">
 <div class="flex justify-between items-center w-full px-8 py-6 max-w-7xl mx-auto">
-<div class="text-xl font-bold tracking-[0.2em] text-[#f2ca50] uppercase font-headline">
+<a class="text-xl font-bold tracking-[0.2em] text-[#f2ca50] uppercase font-headline" href="#top">
             HUGO MORALES
-        </div>
+        </a>
 <div class="hidden md:flex gap-10 items-center">
 <a class="text-[#d0c5af] hover:text-[#f2ca50] transition-colors duration-300 font-label tracking-widest text-xs uppercase" href="#about">About</a>
 <a class="text-[#d0c5af] hover:text-[#f2ca50] transition-colors duration-300 font-label tracking-widest text-xs uppercase" href="#experience">Experience</a>
@@ -155,7 +155,21 @@
             </a>
 </div>
 <div class="md:hidden">
-<span class="material-symbols-outlined text-primary text-3xl">menu</span>
+<button aria-controls="mobile-menu-panel" aria-expanded="false" class="flex items-center justify-center text-primary" id="mobile-menu-button" type="button">
+<span class="material-symbols-outlined text-primary text-3xl" id="mobile-menu-icon">menu</span>
+</button>
+</div>
+</div>
+<div class="hidden border-t border-white/5 md:hidden" id="mobile-menu-panel">
+<div class="max-w-7xl mx-auto px-8 py-6 flex flex-col gap-5 bg-surface-container-low/95">
+<a class="text-[#d0c5af] hover:text-[#f2ca50] transition-colors duration-300 font-label tracking-widest text-xs uppercase" data-mobile-nav-link="true" href="#about">About</a>
+<a class="text-[#d0c5af] hover:text-[#f2ca50] transition-colors duration-300 font-label tracking-widest text-xs uppercase" data-mobile-nav-link="true" href="#experience">Experience</a>
+<a class="text-[#d0c5af] hover:text-[#f2ca50] transition-colors duration-300 font-label tracking-widest text-xs uppercase" data-mobile-nav-link="true" href="#skills">Skills</a>
+<a class="text-[#d0c5af] hover:text-[#f2ca50] transition-colors duration-300 font-label tracking-widest text-xs uppercase" data-mobile-nav-link="true" href="#media">Media</a>
+<a class="text-[#d0c5af] hover:text-[#f2ca50] transition-colors duration-300 font-label tracking-widest text-xs uppercase" data-mobile-nav-link="true" href="#testimonials">Testimonials</a>
+<a class="text-[#d0c5af] hover:text-[#f2ca50] transition-colors duration-300 font-label tracking-widest text-xs uppercase" data-mobile-nav-link="true" href="#contact">Contact</a>
+<a class="gold-gradient text-on-primary-fixed px-6 py-3 font-bold tracking-widest text-xs uppercase rounded-sm flex items-center justify-center gap-2" href="Resume Hugo Morales 2026.pdf" target="_blank">View Resume</a>
+<a class="border border-primary text-primary px-6 py-3 font-bold tracking-widest text-xs uppercase rounded-sm flex items-center justify-center gap-2" href="https://www.linkedin.com/in/hugo-morales-arteaga/" target="_blank">Connect on LinkedIn</a>
 </div>
 </div>
 </nav>
@@ -210,9 +224,27 @@
 <span class="block font-label text-[10px] tracking-widest uppercase text-on-surface-variant">Active Clients</span>
 </div>
 <div>
-<span class="block font-headline text-2xl text-primary">Ready</span>
-<span class="block font-label text-[10px] tracking-widest uppercase text-on-surface-variant">Summer 2026</span>
+<span class="block font-headline text-2xl text-primary">2027</span>
+<span class="block font-label text-[10px] tracking-widest uppercase text-on-surface-variant">Graduation</span>
 </div>
+</div>
+</div>
+<div class="mt-6 grid grid-cols-2 gap-4 md:hidden reveal reveal-up">
+<div class="bg-surface-container-highest border border-white/10 px-4 py-5 text-center">
+<span class="block font-headline text-2xl text-primary">100%</span>
+<span class="block font-label text-[10px] tracking-widest uppercase text-on-surface-variant">Placement Rate</span>
+</div>
+<div class="bg-surface-container-highest border border-white/10 px-4 py-5 text-center">
+<span class="block font-headline text-2xl text-primary">813K+</span>
+<span class="block font-label text-[10px] tracking-widest uppercase text-on-surface-variant">Social Views</span>
+</div>
+<div class="bg-surface-container-highest border border-white/10 px-4 py-5 text-center">
+<span class="block font-headline text-2xl text-primary">10+</span>
+<span class="block font-label text-[10px] tracking-widest uppercase text-on-surface-variant">Active Clients</span>
+</div>
+<div class="bg-surface-container-highest border border-white/10 px-4 py-5 text-center">
+<span class="block font-headline text-2xl text-primary">2027</span>
+<span class="block font-label text-[10px] tracking-widest uppercase text-on-surface-variant">Graduation</span>
 </div>
 </div>
 </div>
@@ -570,6 +602,46 @@
 <script>
     (() => {
         document.body.classList.add('motion-ready');
+
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const mobileMenuPanel = document.getElementById("mobile-menu-panel");
+        const mobileMenuIcon = document.getElementById("mobile-menu-icon");
+        const mobileMenuLinks = document.querySelectorAll("[data-mobile-nav-link]");
+
+        const closeMobileMenu = () => {
+            if (!mobileMenuPanel || !mobileMenuButton || !mobileMenuIcon) return;
+            mobileMenuPanel.classList.add("hidden");
+            mobileMenuButton.setAttribute("aria-expanded", "false");
+            mobileMenuIcon.textContent = "menu";
+        };
+
+        const openMobileMenu = () => {
+            if (!mobileMenuPanel || !mobileMenuButton || !mobileMenuIcon) return;
+            mobileMenuPanel.classList.remove("hidden");
+            mobileMenuButton.setAttribute("aria-expanded", "true");
+            mobileMenuIcon.textContent = "close";
+        };
+
+        if (mobileMenuButton && mobileMenuPanel && mobileMenuIcon) {
+            mobileMenuButton.addEventListener("click", () => {
+                const isOpen = !mobileMenuPanel.classList.contains("hidden");
+                if (isOpen) {
+                    closeMobileMenu();
+                } else {
+                    openMobileMenu();
+                }
+            });
+
+            mobileMenuLinks.forEach((link) => {
+                link.addEventListener("click", closeMobileMenu);
+            });
+
+            window.addEventListener("resize", () => {
+                if (window.innerWidth >= 768) {
+                    closeMobileMenu();
+                }
+            });
+        }
 
         const revealItems = Array.from(document.querySelectorAll('.reveal'));
         if (revealItems.length) {
