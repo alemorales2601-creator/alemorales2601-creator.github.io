@@ -28,7 +28,7 @@ export default function Nav() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 md:px-10">
         <a href="#top" className="flex items-center gap-3">
-          <img src={logo} alt="HM" className="h-9 w-9 rounded-md object-contain bg-primary p-1" />
+          <img src={logo} alt="HM" className="h-10 w-10 rounded-md object-contain" />
           <span className="font-serif-display text-lg font-semibold text-primary hidden sm:inline">
             Hugo Morales
           </span>
