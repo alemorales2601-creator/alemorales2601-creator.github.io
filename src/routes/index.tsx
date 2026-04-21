@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import {
   Award,
@@ -72,12 +72,13 @@ const SectionHeader = ({
 );
 
 function Index() {
-  useEffect(() => {
+  useLayoutEffect(() => {
+    if (window.location.hash) {
+      window.history.replaceState(null, "", window.location.pathname);
+    }
     document.documentElement.style.scrollBehavior = "auto";
     window.scrollTo(0, 0);
-    requestAnimationFrame(() => {
-      document.documentElement.style.scrollBehavior = "";
-    });
+    document.documentElement.style.scrollBehavior = "";
   }, []);
 
   useEffect(() => {
