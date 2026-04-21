@@ -4,6 +4,11 @@ import { RouterProvider } from "@tanstack/react-router";
 import { getRouter } from "./router";
 import "./styles.css";
 
+if (typeof window !== "undefined") {
+  window.history.scrollRestoration = "manual";
+  window.scrollTo(0, 0);
+}
+
 const router = getRouter();
 
 createRoot(document.getElementById("root")!).render(
