@@ -73,6 +73,14 @@ const SectionHeader = ({
 
 function Index() {
   useEffect(() => {
+    document.documentElement.style.scrollBehavior = "auto";
+    window.scrollTo(0, 0);
+    requestAnimationFrame(() => {
+      document.documentElement.style.scrollBehavior = "";
+    });
+  }, []);
+
+  useEffect(() => {
     const els = document.querySelectorAll<HTMLElement>(".reveal");
     const obs = new IntersectionObserver(
       (entries) => {
