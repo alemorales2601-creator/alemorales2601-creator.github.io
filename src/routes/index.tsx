@@ -241,14 +241,10 @@ function Index() {
                 },
                 {
                   num: "02",
-                  date: "April 2026 to Present",
-                  title: "Operations & Strategic Insights Intern",
-                  co: "Have More Safety · University of Arkansas Venture Intern Program",
-                  bullets: [
-                    "Analyzed behavioral patterns and student demographic data to identify operational friction points within university safety systems, translating qualitative findings into actionable insights for program scaling.",
-                    "Synthesized complex research into a Strategic Insight Brief and Visual Map, providing data-driven recommendations to guide curriculum design and institutional messaging strategies.",
-                    "Evaluated institutional risk mitigation frameworks and Title IX compliance standards to surface gaps in existing systems, contributing to the development of a scalable, digital-first training model.",
-                  ],
+                  date: "June 2026 – August 2026",
+                  title: "Participant | Summer Business Incubator Program",
+                  co: "Office of Entrepreneurship & Innovation · University of Arkansas · Fayetteville, Arkansas",
+                  desc: "Selected as a participant in the University of Arkansas Summer Business Incubator, a competitive program through the Office of Entrepreneurship and Innovation that gives student founders dedicated space, resources, and mentorship to build.",
                 },
                 {
                   num: "03",
