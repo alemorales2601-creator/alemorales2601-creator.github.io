@@ -42,13 +42,18 @@ export default function Hero() {
             />
           </h1>
           <SquiggleUnderline className="mt-4" />
-          <p className="mt-7 max-w-xl text-lg leading-relaxed text-foreground/80 md:text-xl">
-            Finance student at Walton College of Business with hands-on experience in financial
-            modeling, operational analysis, and business development. Founded and scaled a
-            revenue-generating company to $2,200 average revenue per client. Bilingual in English
-            and Spanish with demonstrated ability to drive measurable results in fast-paced,
-            analytical environments.
-          </p>
+          <div className="mt-7 max-w-xl space-y-4 text-lg leading-relaxed text-foreground/80 md:text-xl">
+            <p>
+              I came to the United States on a soccer scholarship. Along the way, I saw a gap.
+              Talented athletes back home losing their shot at U.S. universities simply because
+              nobody showed them how. That is why I built Elite Level Scouting LATAM.
+            </p>
+            <p>
+              Now I study Finance and Investments at the Walton College of Business, obsessed with
+              how capital, strategy, and data move companies forward. Bilingual. Builder. Always
+              connecting dots between Latin America and the U.S.
+            </p>
+          </div>
 
           <div className="mt-9 flex flex-wrap gap-3">
             <a

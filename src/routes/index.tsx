@@ -137,22 +137,21 @@ function Index() {
               style={{ transitionDelay: "120ms" }}
             >
               <p>
-                Originally from Bolivia, I'm a{" "}
-                <strong className="text-primary">student-athlete turned business student</strong>.
-                At the Walton College, I'm obsessed with how Finance and AI can scale companies. I
-                don't just study theory, I apply analytics to my own ventures.
-              </p>
-              <p>
-                Beginning with an athletic scholarship in men's soccer at Fulton-Montgomery
-                Community College, I now study{" "}
+                I grew up in Santa Cruz, Bolivia. Soccer got me to the United States, first to{" "}
+                <strong className="text-primary">Fulton-Montgomery Community College</strong> on an
+                athletic scholarship, then to the Walton College of Business at the University of
+                Arkansas, where I study{" "}
                 <strong className="text-primary">Finance, Management & Investment</strong> with a
-                Minor in Business Analytics at the University of Arkansas, combining an
-                international perspective with hands-on entrepreneurship.
+                Minor in Business Analytics.
               </p>
               <p>
-                My background across venture-building, cross-cultural operations, and competitive
-                athletics shapes how I approach every problem: analytically, adaptively, and with
-                long-term ownership in mind.
+                Along the way, I built an amazing project, as a real response to something I
+                experienced firsthand. I came to the U.S. with an agency that left my family
+                completely in the dark. I didn't want other families to go through that.
+              </p>
+              <p>
+                That experience, combined with what I'm learning at Walton, shapes how I think:
+                analytically, with real context, and with skin in the game.
               </p>
             </div>
           </div>
@@ -187,9 +186,11 @@ function Index() {
               </h2>
               <SquiggleUnderline className="mt-4" />
               <p className="mt-6 max-w-lg text-lg leading-relaxed text-muted-foreground">
-                Won top honors at the Made@U of A Entrepreneurship Showcase at the Walton College
-                of Business. Presented a strategic business model to a panel of judges, focusing
-                on market valuation and revenue scalability.
+                Won 1st place at the Made@U of A Entrepreneurship Showcase, competing against
+                student founders across the Walton College of Business. Pitched Elite Level
+                Scouting LATAM's business model, market opportunity in Latin American
+                student-athlete recruitment, and revenue scalability to a panel of judges from the
+                entrepreneurship and investment community.
               </p>
               <ul className="mt-6 flex flex-wrap gap-2">
                 {[
@@ -231,11 +232,11 @@ function Index() {
                   num: "01",
                   date: "April 2025 to Present",
                   title: "Founder",
-                  co: "Elite Level Scouting USA · Santa Cruz, Bolivia",
+                  co: "Elite Level Scouting LATAM · Santa Cruz, Bolivia",
                   bullets: [
-                    "Founded and scaled a sports-recruitment business from 0 to $2,200 average revenue per client through structured multi-year payment plans and a defined pricing model.",
-                    "Managed a portfolio of 10+ active clients, maintaining recurring revenue forecasts, tracking payment timelines, and achieving a 100% placement rate for clients completing the program.",
-                    "Analyzed pricing structures, client ROI, and competitive positioning to refine the revenue model and maintain profitability across all active engagements.",
+                    "Built Elite Level Scouting from a personal experience: I came to the U.S. with an agency that left my family without guidance, clarity, or real support. I didn't want other families to go through that.",
+                    "Designed the full recruitment model, athlete evaluation framework, and multi-year pricing structure ($2,400 average revenue per client). Built and deployed an internal platform and client-facing application during time in Bolivia, giving athletes real-time visibility into their process and giving coaches a cleaner way to discover international talent.",
+                    "5+ student-athletes placed at U.S. universities. 10+ families across Bolivia and South America currently in process. 100% placement rate for athletes who complete the program.",
                   ],
                 },
                 {
@@ -480,9 +481,9 @@ function Index() {
               <TestimonialCard
                 photo={carlosImg}
                 name="Carlos Pazos"
-                school="Herkimer College"
-                spanish="Contacté a Elite Level y en pocos meses tenía un plan claro y universidades concretas en la mesa. Hoy compito en Herkimer College, Nueva York."
-                english="Within a few months I had a clear plan and concrete universities on the table. Today I compete at Herkimer College in New York."
+                school="Benedictine College"
+                spanish="Contacté a Elite Level y en pocos meses tenía un plan claro y universidades concretas en la mesa. Hoy compito en Benedictine College, Kansas."
+                english="Within a few months I had a clear plan and concrete universities on the table. Today I compete at Benedictine College in Kansas."
                 tiltRight
                 delay={100}
               />
@@ -507,8 +508,8 @@ function Index() {
             <div className="grid gap-12 md:grid-cols-2">
               <div className="reveal space-y-7">
                 <p className="max-w-md text-lg leading-relaxed text-muted-foreground">
-                  For internship inquiries, collaborative scouting ventures, or professional
-                  networking, let's connect.
+                  Open to internship opportunities in finance, strategy, and consulting, and always
+                  up for a conversation with people building real things.
                 </p>
 
                 <ul className="space-y-5">
