@@ -37,7 +37,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Hugo Morales: Finance student at Walton College of Business, founder of Elite Level Scouting USA. Bilingual, analytical, results-driven.",
+          "Hugo Morales: Finance student (Concentration in Management and Investments) at Walton College of Business, founder of Elite Level Scouting LATAM. Bilingual, analytical, results-driven.",
       },
       { property: "og:title", content: "Hugo Morales · Finance Student & Founder" },
       {
@@ -141,8 +141,10 @@ function Index() {
                 <strong className="text-primary">Fulton-Montgomery Community College</strong> on an
                 athletic scholarship, then to the Walton College of Business at the University of
                 Arkansas, where I study{" "}
-                <strong className="text-primary">Finance, Management & Investment</strong> with a
-                Minor in Business Analytics.
+                <strong className="text-primary">
+                  Finance, Concentration in Management and Investments
+                </strong>
+                , with an expected graduation in December 2027.
               </p>
               <p>
                 Along the way, I built an amazing project, as a real response to something I
@@ -230,13 +232,15 @@ function Index() {
               {[
                 {
                   num: "01",
-                  date: "April 2025 to Present",
+                  date: "May 2025 to Present",
                   title: "Founder",
                   co: "Elite Level Scouting LATAM · Santa Cruz, Bolivia",
                   bullets: [
                     "Built Elite Level Scouting from a personal experience: I came to the U.S. with an agency that left my family without guidance, clarity, or real support. I didn't want other families to go through that.",
-                    "Designed the full recruitment model, athlete evaluation framework, and multi-year pricing structure ($2,400 average revenue per client). Built and deployed an internal platform and client-facing application during time in Bolivia, giving athletes real-time visibility into their process and giving coaches a cleaner way to discover international talent.",
+                    "Designed the full recruitment model, athlete evaluation framework, and multi-year pricing structure ($2,500 average revenue per client). Built and deployed an internal platform and client-facing application during time in Bolivia, giving athletes real-time visibility into their process and giving coaches a cleaner way to discover international talent.",
                     "5+ student-athletes placed at U.S. universities. 10+ families across Bolivia and South America currently in process. 100% placement rate for athletes who complete the program.",
+                    "Secured nearly $1M in scholarship value for client families, with a 100% placement rate across the portfolio.",
+                    "Won 1st Place and a cash prize at the Made U of A pitch competition, University of Arkansas (May 2026).",
                   ],
                 },
                 {
@@ -244,7 +248,7 @@ function Index() {
                   date: "June 2026 – August 2026",
                   title: "Participant | Summer Business Incubator Program",
                   co: "Office of Entrepreneurship & Innovation · University of Arkansas · Fayetteville, Arkansas",
-                  desc: "Selected as a participant in the University of Arkansas Summer Business Incubator, a competitive program through the Office of Entrepreneurship and Innovation that gives student founders dedicated space, resources, and mentorship to build.",
+                  desc: "Selected as a participant in the University of Arkansas Summer Business Incubator, a competitive program through the Office of Entrepreneurship and Innovation that gives student founders dedicated space, resources, and mentorship to build. Stress-tested Elite Level LATAM's financial model under structured mentor review, refining unit economics, margin assumptions, and multi-year revenue projections, and built investor-facing materials including market sizing analysis, revenue scenarios, and a scalability model for the Latin American student-athlete recruitment market.",
                 },
                 {
                   num: "03",
@@ -270,10 +274,13 @@ function Index() {
                 },
                 {
                   num: "05",
-                  date: "Jan 2024 to May 2025",
-                  title: "Operations Supervisor",
-                  co: "FMCC Library · Johnstown, NY",
-                  desc: "Managed daily operations serving a 2,000+ student body. Maintained zero asset loss across all supervised equipment.",
+                  date: "August 2026 to Present",
+                  title: "Connection Desk Ambassador",
+                  co: "Cordia Harrington Center for Excellence (CORD) · University of Arkansas · Fayetteville, AR",
+                  bullets: [
+                    "Serve as first point of contact at the CORD, guiding students through Workday Student and Blackboard navigation, academic advising scheduling, and referrals to campus support resources.",
+                    "Coordinate front-desk operations, phone and email inquiries, and appointment scheduling across advising, tutoring, and student success services, resolving day-to-day issues to maintain smooth center operations.",
+                  ],
                 },
               ].map((e, i) => (
                 <article
@@ -396,15 +403,15 @@ function Index() {
               {[
                 {
                   t: "1st Place · Made@U of A",
-                  s: "Pitch Competition · Office of Entrepreneurship · Walton",
+                  s: "Pitch Competition · University of Arkansas · May 2026",
                 },
                 { t: "Bolivian Tuition Advantage Scholarship", s: "University of Arkansas" },
                 { t: "Dean's List", s: "Fall 2023 · Spring 2024 · Spring 2025" },
                 { t: "Athletic Scholarship", s: "Men's Soccer · FMCC" },
                 { t: "Side Hustle Hub Member", s: "Office of Entrepreneurship · UofA" },
                 {
-                  t: "Junior · Finance, Management & Investment",
-                  s: "Walton College of Business",
+                  t: "Finance, Concentration in Management and Investments",
+                  s: "Walton College of Business · Expected December 2027",
                 },
               ].map((h, i) => (
                 <div
@@ -647,8 +654,8 @@ function Index() {
                 {[
                   "Elite Level Scouting USA · 100% Placement Rate",
                   "813K+ Organic Social Views",
-                  "Finance, Management & Investment · Business Analytics Minor",
-                  "Fayetteville, AR · Open to Summer 2026 Internships",
+                  "Finance · Concentration in Management and Investments",
+                  "Fayetteville, AR · Open to Summer 2027 Internships",
                   "1st Place · Made@U of A Pitch Competition",
                 ].map((t) => (
                   <span key={`${dup}-${t}`} className="flex items-center px-8">

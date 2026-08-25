@@ -49,7 +49,8 @@ export default function Hero() {
               nobody showed them how. That is why I built Elite Level Scouting LATAM.
             </p>
             <p>
-              Now I study Finance and Investments at the Walton College of Business, obsessed with
+              Now I study Finance, Concentration in Management and Investments, at the Walton
+              College of Business, obsessed with
               how capital, strategy, and data move companies forward. Bilingual. Builder. Always
               connecting dots between Latin America and the U.S.
             </p>
